@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Supermarkt-Umsatzanalyse & Mitgliedschaftsstrategie</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            padding: 40px 0;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .slide {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 60px;
+            margin-bottom: 40px;
+            min-height: 560px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            border: 1px solid #334155;
+            display: block;
+        }
+        .slide-header {
+            border-left: 6px solid #10b981;
+            padding-left: 16px;
+            margin-bottom: 40px;
+        }
+        .slide-header h2 {
+            font-size: 28px;
+            color: #f1f5f9;
+            font-weight: 700;
+        }
+        .slide-header p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+        h1 {
+            font-size: 42px;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 20px;
+            color: #10b981;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 16px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 16px;
+            text-align: left;
+        }
+        th {
+            background-color: #10b981;
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        td {
+            border-bottom: 1px solid #334155;
+            color: #e2e8f0;
+            font-size: 15px;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .chart-box {
+            background-color: #0f172a;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .bar-row {
+            margin-bottom: 20px;
+        }
+        .bar-row:last-child {
+            margin-bottom: 0;
+        }
+        .bar-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .bar-container {
+            width: 100%;
+            height: 32px;
+            background-color: #334155;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .tile-container {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-spacing: 16px 0;
+            margin-left: -16px;
+            margin-right: -16px;
+        }
+        .tile {
+            display: table-cell;
+            background-color: #0f172a;
+            padding: 24px;
+            border-radius: 8px;
+            border-top: 4px solid #10b981;
+            vertical-align: top;
+        }
+        .tile h4 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .tile p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 0;
+        }
+        .title-slide {
+            text-align: center;
+            padding-top: 140px;
+        }
+        .title-slide h1 {
+            font-size: 38px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        .title-slide p {
+            font-size: 18px;
+            color: #10b981;
+        }
+        .footer-text {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide">
+            <div class="title-slide">
+                <h1>Maximierung des Customer Lifetime Value:<br>Strategie zur Mitgliedererweiterung</h1>
+                <p>~ Datenbasierte Ladenlayout-Optimierung & Personalisierte Treuevorteile ~</p>
+                <div style="margin-top: 60px; font-size: 14px; color: #64748b;">Datenanalyst-Portfolio</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <h2>1. Hintergrund & Geschäftsziel</h2>
+                <p>Relevanz dieser Analyse</p>
+            </div>
+            <h3>Nachweis des wirtschaftlichen Nutzens der Umwandlung von Laufkundschaft in Mitglieder</h3>
+            <p>Die erste explorative Datenanalyse (EDA) zeigte eine deutliche Lücke im Transaktionswert zwischen regulären Kunden („Normal“) und registrierten Mitgliedern („Member“).</p>
+            <p>Das Ziel dieser Analyse ist es, die Ursachen für diese Umsatzdifferenz zu identifizieren (Menge vs. Produktauswahl vs. geografische Lage) und konkrete Maßnahmen für die Filialen abzuleiten, um allgemeine Laufkundschaft effizient in wertvolle treue Mitglieder umzuwandeln.</p>
+            <div class="footer-text">Slide 2</div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-header">
+                <h2>2. Validierung des Kunden-Umsatzes</h2>
+                <p>Warenkorbanalyse nach Kundentyp</p>
+            </div>
+            <h3>Mitglieder geben pro Einkauf ca. 8 Dollar mehr aus</h3>
+            <div class="chart-box">
+                <div class="bar-row">
+                    <div class="bar-label">Mitglieder (Member) - Durchschnittlicher Warenkorbwert</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 100%; background-color: #10b981;">$122.51</div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">Reguläre Kunden (Normal) - Durchschnittlicher Warenkorbwert</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 93.4%; background-color: #475569;">$114.40</div>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Zentrale Erkenntnis:</strong> Die Daten belegen, dass die durchschnittlich gekaufte Artikel

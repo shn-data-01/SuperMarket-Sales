@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Supermarket Sales Analysis & Membership Strategy</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            padding: 40px 0;
+        }
+        .presentation-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .slide {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 60px;
+            margin-bottom: 40px;
+            min-height: 560px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            border: 1px solid #334155;
+            display: block;
+        }
+        .slide-header {
+            border-left: 6px solid #10b981;
+            padding-left: 16px;
+            margin-bottom: 40px;
+        }
+        .slide-header h2 {
+            font-size: 28px;
+            color: #f1f5f9;
+            font-weight: 700;
+        }
+        .slide-header p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+        h1 {
+            font-size: 42px;
+            color: #ffffff;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 20px;
+            color: #10b981;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        p {
+            font-size: 16px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        ul {
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+        li {
+            font-size: 16px;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 16px;
+            text-align: left;
+        }
+        th {
+            background-color: #10b981;
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        td {
+            border-bottom: 1px solid #334155;
+            color: #e2e8f0;
+            font-size: 15px;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .chart-box {
+            background-color: #0f172a;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .bar-row {
+            margin-bottom: 20px;
+        }
+        .bar-row:last-child {
+            margin-bottom: 0;
+        }
+        .bar-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .bar-container {
+            width: 100%;
+            height: 32px;
+            background-color: #334155;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .tile-container {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+            border-spacing: 16px 0;
+            margin-left: -16px;
+            margin-right: -16px;
+        }
+        .tile {
+            display: table-cell;
+            background-color: #0f172a;
+            padding: 24px;
+            border-radius: 8px;
+            border-top: 4px solid #10b981;
+            vertical-align: top;
+        }
+        .tile h4 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .tile p {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 0;
+        }
+        .title-slide {
+            text-align: center;
+            padding-top: 140px;
+        }
+        .title-slide h1 {
+            font-size: 38px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        .title-slide p {
+            font-size: 18px;
+            color: #10b981;
+        }
+        .footer-text {
+            position: absolute;
+            bottom: 30px;
+            right: 60px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="title-slide">
+                <h1>Maximizing Customer Lifetime Value:<br>Membership Expansion Strategy</h1>
+                <p>~ Data-Driven Store Layout & Personalized Rewards Optimization ~</p>
+                <div style="margin-top: 60px; font-size: 14px; color: #64748b;">Data Analyst Portfolio</div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>1. Background & Business Objective</h2>
+                <p>Why this analysis matters</p>
+            </div>
+            <h3>Proving the Business Value of Converting Normal Customers to Members</h3>
+            <p>Initial exploratory data analysis (EDA) revealed a significant gap in transaction value between "Normal" customers and loyalty "Members".</p>
+            <p>The objective of this analysis is to identify where this spending variance originates (quantity vs. choice of product vs. geographical location) and deliver actionable store recommendations to convert general foot traffic into high-value members effectively.</p>
+            <div class="footer-text">Slide 2</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>2. Customer Type Spend Verification</h2>
+                <p>Customer Spend Analysis</p>
+            </div>
+            <h3>Members Spend Approximately $8 More Per Visit</h3>
+            <div class="chart-box">
+                <div class="bar-row">
+                    <div class="bar-label">Member Customers - Average Order Value (AOV)</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 100%; background-color: #10b981;">$122.51</div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">Normal Customers - Average Order Value (AOV)</div>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 93.4%; background-color: #475569;">$114.40</div>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Key Strategic Insight:</strong> The data proves that average items purchased per visit are practically identical between general customers (<strong>10.21 units</strong>) and members (<strong>10.46 units</strong>). This proves that members are not buying in higher volumes, but are deliberately choosing <strong>higher unit-price (premium) variants</strong> within categories.</p>
+            <div class="footer-text">Slide 3</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>3. Cross-Tabulation: Gender vs. Product Category</h2>
+                <p>Gender & Category Demographics</p>
+            </div>
+            <h3>No Statistically Significant Variance Found by Gender</h3>
+            <p>To determine if promotional spend should be tailored to specific gender segments, top-performing product categories were cross-analyzed.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Category</th>
+                        <th>Gender</th>
+                        <th>Normal Transactions</th>
+                        <th>Member Transactions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" style="font-weight: bold; color: #10b981;">Personal Care</td>
+                        <td>Male</td>
+                        <td>51 count</td>
+                        <td>56 count</td>
+                    </tr>
+                    <tr>
+                        <td>Female</td>
+                        <td>48 count</td>
+                        <td>53 count</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" style="font-weight: bold; color: #10b981;">Fruits</td>
+                        <td>Female</td>
+                        <td>50 count</td>
+                        <td>56 count</td>
+                    </tr>
+                    <tr>
+                        <td>Male</td>
+                        <td>51 count</td>
+                        <td>52 count</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 16px;"><strong>Conclusion:</strong> Member-to-Normal ratios remain balanced across both genders. Gender-specific targeting is unnecessary; an all-inclusive customer strategy yields maximum ROI.</p>
+            <div class="footer-text">Slide 4</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>4. Location Intelligence: City-Level Insights</h2>
+                <p>Geographic Location Intelligence</p>
+            </div>
+            <h3>Discovering Clear Regional Preferences and Strengths</h3>
+            <p>Unlike gender demographics, isolating the transaction data by City uncovered distinct regional trends where members highly concentrate their spending.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Target Category</th>
+                        <th>Normal Transactions</th>
+                        <th>Member Transactions</th>
+                        <th>Strategic Insight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;">Los Angeles</td>
+                        <td style="color: #10b981; font-weight: bold;">Beverages</td>
+                        <td>30 count</td>
+                        <td style="color: #10b981; font-weight: bold;">41 count</td>
+                        <td>Members show clear dominance. Beverages serve as the core retention anchor here.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Chicago</td>
+                        <td style="color: #10b981; font-weight: bold;">Fruits</td>
+                        <td>32 count</td>
+                        <td style="color: #10b981; font-weight: bold;">40 count</td>
+                        <td>Fresh produce (Fruits) is the primary driver for member engagement.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 16px;">Rather than executing a blanket promotion, the data strongly supports localized marketing initiatives optimized around regional store strengths.</p>
+            <div class="footer-text">Slide 5</div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>5. Data-Driven Recommendations</h2>
+                <p>Actionable Recommendations</p>
+            </div>
+            <h3>Two-Pronged Approach to Drive Exponential Membership Growth</h3>
+            
+            <div style="margin-bottom: 24px;">
+                <h4 style="color: #10b981; font-size: 18px; margin-bottom: 8px;">1. Region-Specific Floor Plan & Layout Optimization</h4>
+                <p style="margin-bottom: 4px; padding-left: 12px; border-left: 3px solid #334155;"><strong>Chicago Store:</strong> Relocate the "Fruits & Fresh Produce" section directly to the primary entrance zone (A-Rank Space). Capitalizing on visual high-volume items drives customer curiosity and provides an immediate touchpoint for membership sign-up pitches.</p>
+                <p style="padding-left: 12px; border-left: 3px solid #334155;"><strong>Los Angeles Store:</strong> Position high-margin "Personal Care" items directly along the main foot traffic path leading toward the high-demand "Beverages" section to induce incremental cross-selling.</p>
+            </div>
+
+            <div>
+                <h4 style="color: #10b981; font-size: 18px; margin-bottom: 8px;">2. Targeted Loyalty Perks for High-Frequency Categories</h4>
+                <div class="tile-container">
+                    <div class="tile">
+                        <h4>LA: Beverage Incentives</h4>
+                        <p>Launch member-only bulk discounts on cases and exclusive early access to premium beverage releases.</p>
+                    </div>
+                    <div class="tile">
+                        <h4>Chicago: Produce Perks</h4>
+                        <p>Introduce exclusive member morning markets and a 3x pointmultiplier on fresh local produce.</p>
+                    </div>
+                    <div class="tile">
+                        <h4>Chain-Wide: Bundling</h4>
+                        <p>Deploy "Cross-Category Bundles" (e.g., Personal Care + Fruits) with an exclusive 5% member discount.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-text">Slide 6</div>
+        </div>
+    </div>
+</body>
+</html>
